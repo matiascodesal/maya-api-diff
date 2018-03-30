@@ -9,7 +9,7 @@ import maya.OpenMayaUI as OpenMayaUI
 import maya.api.OpenMayaUI as OpenMayaUI2
 import maya.OpenMayaFX as OpenMayaFX
 
-defunct_classes = set(['uCharPtr', 'shortPtr', '_object', 'floatPtr', '_swig_property', 'intPtr', 'charPtr', 'boolPtr', 'doublePtr', 'uIntPtr'])
+defunct_classes = set(['MScriptUtil','uCharPtr', 'shortPtr', '_object', 'floatPtr', '_swig_property', 'intPtr', 'charPtr', 'boolPtr', 'doublePtr', 'uIntPtr'])
 
 def get_api_classes(module):
     classes = set()
