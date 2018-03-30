@@ -8,8 +8,9 @@ import maya.api.OpenMayaRender as OpenMayaRender2
 import maya.OpenMayaUI as OpenMayaUI
 import maya.api.OpenMayaUI as OpenMayaUI2
 import maya.OpenMayaFX as OpenMayaFX
+import maya.OpenMayaMPx as OpenMayaMPx
 
-defunct_classes = set(['MScriptUtil','uCharPtr', 'shortPtr', '_object', 'floatPtr', '_swig_property', 'intPtr', 'charPtr', 'boolPtr', 'doublePtr', 'uIntPtr'])
+deprecated_classes = set(['MScriptUtil','uCharPtr', 'shortPtr', '_object', 'floatPtr', '_swig_property', 'intPtr', 'charPtr', 'boolPtr', 'doublePtr', 'uIntPtr'])
 
 def get_api_classes(module):
     classes = set()
@@ -21,7 +22,7 @@ def get_api_classes(module):
 def get_missing_classes(module1, module2):
     classes1 = get_api_classes(module1)
     classes2 = get_api_classes(module2)
-    return classes1 - classes2 - defunct_classes
+    return classes1 - classes2 - deprecated_classes
 
 def print_module_report(module, classes):
     print "These are the {} 1.0 classes missing in 2.0:".format(module.__name__)
