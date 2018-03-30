@@ -22,7 +22,7 @@ def get_api_classes(module):
 def get_missing_classes(module1, module2):
     classes1 = get_api_classes(module1)
     classes2 = get_api_classes(module2)
-    return classes1 - classes2 - deprecated_classes
+    return sorted(list(classes1 - classes2 - deprecated_classes))
 
 def print_module_report(module, classes):
     print "These are the {} 1.0 classes missing in 2.0:".format(module.__name__)
