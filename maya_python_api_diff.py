@@ -7,6 +7,7 @@ import maya.OpenMayaRender as OpenMayaRender
 import maya.api.OpenMayaRender as OpenMayaRender2
 import maya.OpenMayaUI as OpenMayaUI
 import maya.api.OpenMayaUI as OpenMayaUI2
+import maya.OpenMayaFX as OpenMayaFX
 
 defunct_classes = set(['uCharPtr', 'shortPtr', '_object', 'floatPtr', '_swig_property', 'intPtr', 'charPtr', 'boolPtr', 'doublePtr', 'uIntPtr'])
 
